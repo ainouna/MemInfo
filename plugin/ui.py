@@ -4,7 +4,7 @@ from . import _
 #
 #    Plugin for Dreambox-Enigma2
 #    version:
-VERSION = "1.01"
+VERSION = "1.02"
 #    ims (c)2018 as MemInfo
 #
 #    This program is free software; you can redistribute it and/or
@@ -101,7 +101,7 @@ def getMinMax():
 	fo.write("Parameter\t\tStart\tMinimum\tCurrent\tMaximum\n")
 	fo.write("---------------------------------------------------------\n")
 	for i, x in enumerate(current):
-		fo.write("%s%s\t\t%s\t%s\t%s\t%s\t%s\n" % (MINIMUM[i][0], '\t' if len(MINIMUM[i][0])< 8 else '', STARTMEM[i][1], MINIMUM[i][1], x[1], MAXIMUM[i][1], x[2]))
+		fo.write("%s%s\t%s\t%s\t%s\t%s\t%s\n" % (MINIMUM[i][0], '\t' if len(MINIMUM[i][0])< 8 else '', STARTMEM[i][1], MINIMUM[i][1], x[1], MAXIMUM[i][1], x[2]))
 	fo.close()
 	START = False
 
@@ -316,97 +316,59 @@ class MemInfoAutoScreen(Screen):
 			MemInfoAuto.dialog.hide()
 			MemInfoAuto.show = False
 
+from Components.ScrollLabel import ScrollLabel
 class MemInfoInfoScreen(Screen):
 	if HD:
-		skin = """<screen name="MemInfoInfoScreen" position="center,center" zPosition="2" size="620,550" title="MemInfo Info" backgroundColor="#31000000" >
-				<widget name="lmemtext" font="Regular;16" position="10,10" size="140,504" zPosition="2" valign="top" halign="left" backgroundColor="#31000000" transparent="1" />
-				<widget name="lmemvalue" font="Regular;16" position="150,10" size="100,504" zPosition="2" valign="top" halign="right" backgroundColor="#31000000" transparent="1" />
-				<widget name="rmemtext" font="Regular;16" position="370,10" size="140,504" zPosition="2" valign="top" halign="left" backgroundColor="#31000000" transparent="1" />
-				<widget name="rmemvalue" font="Regular;16" position="510,10" size="100,504" zPosition="2" valign="top" halign="right" backgroundColor="#31000000" transparent="1" />
-				<widget name="pfree" position="240,115" size="70,20" font="Regular;14" zPosition="3" halign="right" backgroundColor="#31000000" transparent="1" />
-				<widget name="pused" position="240,390" size="70,20" font="Regular;14" zPosition="3" halign="right" backgroundColor="#31000000" transparent="1" />
-				<widget name="slide" position="320,10" size="18,500" render="Progress" zPosition="3" borderWidth="1" orientation="orBottomToTop" />
-				<ePixmap pixmap="skin_default/div-h.png" position="0,519" zPosition="2" size="620,2" />
-				<widget name="key_red" position="10,522" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="red" />
-				<widget name="key_green" position="130,522" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="green" />
-				<widget name="key_blue" position="390,522" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="blue" />
+		skin = """<screen name="MemInfoInfoScreen" position="center,center" zPosition="2" size="720,850" title="MemInfo Info" backgroundColor="#31000000" >
+				<widget name="text" font="Regular;16" position="10,10" size="700,804" zPosition="2" valign="top" halign="left" backgroundColor="#31000000" transparent="1" />
+				<ePixmap pixmap="skin_default/div-h.png" position="0,819" zPosition="2" size="720,2" />
+				<widget name="key_red" position="10,822" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="red" />
+				<widget name="key_green" position="130,822" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="green" />
+				<widget name="key_blue" position="390,822" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="blue" />
 			</screen>"""
 	else:
-		skin = """<screen name="MemInfoInfoScreen" position="center,50" zPosition="2" size="540,500" title="MemInfo Info" backgroundColor="#31000000" >
-				<widget name="lmemtext" font="Regular;16" position="10,10" size="120,500" zPosition="2" valign="top" halign="left" backgroundColor="#31000000" transparent="1" />
-				<widget name="lmemvalue" font="Regular;16" position="130,10" size="80,500" zPosition="2" valign="top" halign="right" backgroundColor="#31000000" transparent="1" />
-				<widget name="rmemtext" font="Regular;16" position="330,10" size="120,500" zPosition="2" valign="top" halign="left" backgroundColor="#31000000" transparent="1" />
-				<widget name="rmemvalue" font="Regular;16" position="450,10" size="80,500" zPosition="2" valign="top" halign="right" backgroundColor="#31000000" transparent="1" />
-				<widget name="pfree" position="200,100" size="70,20" font="Regular;14" zPosition="3" halign="right" backgroundColor="#31000000" transparent="1" />
-				<widget name="pused" position="200,370" size="70,20" font="Regular;14" zPosition="3" halign="right" backgroundColor="#31000000" transparent="1" />
-				<widget name="slide" position="280,10" size="18,445" render="Progress" zPosition="3" borderWidth="1" orientation="orBottomToTop" />
-				<ePixmap pixmap="skin_default/div-h.png" position="0,465" zPosition="2" size="540,2" />
-				<widget name="key_red" position="10,472" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="red" />
-				<widget name="key_green" position="130,472" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="green" />
-				<widget name="key_blue" position="390,472" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="blue" />
+		skin = """<screen name="MemInfoInfoScreen" position="center,50" zPosition="2" size="540,480" title="MemInfo Info" backgroundColor="#31000000" >
+				<widget name="text" font="Regular;16" position="10,10" size="520,453" zPosition="2" valign="top" halign="left" backgroundColor="#31000000" transparent="1" />
+				<ePixmap pixmap="skin_default/div-h.png" position="0,453" zPosition="2" size="540,2" />
+				<widget name="key_red" position="10,455" zPosition="2" size="130,28" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="red" />
+				<widget name="key_green" position="130,455" zPosition="2" size="130,25" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="green" />
+				<widget name="key_blue" position="390,455" zPosition="2" size="130,25" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="blue" />
 			</screen>"""
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		self.setup_title = _("MemInfo Info")
-		self["actions"] = ActionMap(["SetupActions", "ColorActions"],
+		self["actions"] = ActionMap(["SetupActions", "ColorActions", "WizardActions"],
 			{
 				"cancel": self.cancel,
 				"green": self.getMemInfo,
+				"up": self.pageUp,
+				"down":	self.pageDown,
+				"left":	self.pageUp,
+				"right": self.pageDown,
 			}, -2)
 
 		self["key_red"] = Label(_("Cancel"))
 		self["key_green"] = Label(_("Refresh"))
 		self["key_blue"] = Label()
 
-		self['lmemtext'] = Label()
-		self['lmemvalue'] = Label()
-		self['rmemtext'] = Label()
-		self['rmemvalue'] = Label()
-		self['pfree'] = Label()
-		self['pused'] = Label()
-
-		self["slide"] = ProgressBar()
-		self["slide"].setValue(100)
-
+		self["text"] = ScrollLabel()
 		self.setTitle(_("MemInfo Info") + "  " + VERSION)
 		self.onLayoutFinish.append(self.getMemInfo)
 
+	def pageUp(self):
+		self["text"].pageUp()
+
+	def pageDown(self):
+		self["text"].pageDown()
+
 	def getMemInfo(self):
 		try:
-			ltext = rtext = ""
-			lvalue = rvalue = ""
-			mem = 0
-			free = 0
-			for i, line in enumerate(open('/proc/meminfo','r')):
-				s = line.strip().split(None, 2)
-				if len(s) == 3:
-					name, size, units = s
-				elif len(s) == 2:
-					name, size = s
-					units = ""
-				else:
-					continue
-				if name.startswith("MemTotal"):
-					mem = int(size)
-				if name.startswith("MemFree"):
-					free = int(size)
-				if i < 28:
-					ltext += "".join((name,"\n"))
-					lvalue += "".join((size," ",units,"\n"))
-				else:
-					rtext += "".join((name,"\n"))
-					rvalue += "".join((size," ",units,"\n"))
-
-			self['lmemtext'].setText(ltext)
-			self['lmemvalue'].setText(lvalue)
-			self['rmemtext'].setText(rtext)
-			self['rmemvalue'].setText(rvalue)
-
-			self["slide"].setValue(int(100.0*(mem-free)/mem+0.25))
-			self['pfree'].setText("%.1f %s" % (100.*free/mem,'%'))
-			self['pused'].setText("%.1f %s" % (100.*(mem-free)/mem,'%'))
-
+			text = ""
+			for i, line in enumerate(open('/var/log/meminfo.log','r')):
+				if i != 2:
+					text += line.strip().replace('\t\t', '\t') + '\n'
+			self["text"].setText(text)
 		except Exception, e:
 			print "[MemInfo] getMemory FAIL:", e
 
