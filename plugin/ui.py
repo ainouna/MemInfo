@@ -98,7 +98,7 @@ def getMinMax():
 	fo = open("/var/log/meminfo.log", "w")
 	t = localtime()
 	fo.write("Time: %2d:%02d:%02d\n" % (t.tm_hour, t.tm_min, t.tm_sec))
-	fo.write("Parameter\t\tStart\tMinimum\tCurrent\tMaximum\n")
+	fo.write("Parameter\tStart\tMinimum\tCurrent\tMaximum\n")
 	fo.write("---------------------------------------------------------\n")
 	for i, x in enumerate(current):
 		fo.write("%s%s\t%s\t%s\t%s\t%s\t%s\n" % (MINIMUM[i][0], '\t' if len(MINIMUM[i][0])< 8 else '', STARTMEM[i][1], MINIMUM[i][1], x[1], MAXIMUM[i][1], x[2]))
