@@ -1,0 +1,833 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Enigma2 ManagerAutofs Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-10 17:33+0100\n"
+"PO-Revision-Date: 2018-11-10 17:35+0100\n"
+"Last-Translator: ims <ims21@users.sourceforge.net>\n"
+"Language-Team: PLi\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+msgid "plugins"
+msgstr "pluginy"
+
+msgid "menu-system"
+msgstr ""
+
+msgid "extensions"
+msgstr "rozšíření"
+
+msgid "event info"
+msgstr "V informaci o události"
+
+msgid "Setup MemInfo"
+msgstr ""
+
+msgid "memory monitoring"
+msgstr ""
+
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minuta"
+msgstr[1] "%d minuty"
+msgstr[2] "%d minut"
+
+#, python-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d sekunda"
+msgstr[1] "%d sekundy"
+msgstr[2] "%d sekund"
+
+msgid "Default"
+msgstr "Výchozí"
+
+msgid "Save"
+msgstr "Uložit"
+
+msgid "Cancel"
+msgstr "Zavřít"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Restart"
+msgstr "Restartovat"
+
+msgid "Enable MemInfo"
+msgstr "Povolit MemInfo"
+
+msgid "Auto timeout"
+msgstr ""
+
+msgid "Time of info message"
+msgstr ""
+
+msgid "Auto timeout (1-50min)"
+msgstr ""
+
+msgid "Time of info message (1-10sec)"
+msgstr ""
+
+msgid "Show info on screen"
+msgstr ""
+
+msgid "Display plugin in"
+msgstr "Zobrazovat plugin v"
+
+msgid "Memory:"
+msgstr "Paměť:"
+
+msgid "MB"
+msgstr ""
+
+msgid "Used:"
+msgstr "Použito:"
+
+msgid "Free:"
+msgstr "Volná:"
+
+msgid "Starting"
+msgstr "Spouští se"
+
+msgid "MemInfo Status"
+msgstr ""
+
+msgid "Started"
+msgstr "Spuštěno"
+
+msgid "Stopped"
+msgstr "Zastaveno"
+
+msgid "MemInfo saved"
+msgstr ""
+
+msgid "MemInfo Info"
+msgstr ""
+
+msgid "Refresh"
+msgstr "Obnovit"
+
+#~ msgid "Manager Autofs"
+#~ msgstr "Manager Autofs"
+
+#~ msgid "Manage autofs files and conection"
+#~ msgstr "Upravuje soubory Autofs a připojení"
+
+#~ msgid "Mountpoint"
+#~ msgstr "Bod připojení"
+
+#~ msgid "auto.file"
+#~ msgstr "Soubor auto"
+
+#~ msgid "Edit mountpoint"
+#~ msgstr "Upravit bod připojení"
+
+#~ msgid "Close"
+#~ msgstr "Zavřít"
+
+#~ msgid "Add mountpoint"
+#~ msgstr "Přidat bod připojení"
+
+#~ msgid "Enable/disable mountpoint"
+#~ msgstr "Povolit/zakázat bod připojení"
+
+#~ msgid "Edit auto file"
+#~ msgstr "Upravit auto soubor"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "Move item up"
+#~ msgstr "Přesun položky nahoru"
+
+#~ msgid "Move item down"
+#~ msgstr "Přesun položky dolů"
+
+#~ msgid "Enable/disable moving item"
+#~ msgstr "Povolit/zakázat přesun položky"
+
+#~ msgid "Manager Autofs v.%s - press %sOK%s on record or use %sMenu%s"
+#~ msgstr ""
+#~ "Manager Autofs v.%s - stiskněte %sOK%s na řádku nebo použijte %sMenu%s"
+
+#~ msgid "Disable"
+#~ msgstr "Zakázat"
+
+#~ msgid "Edit record:"
+#~ msgstr "Upravit záznam:"
+
+#~ msgid "Edit record for '%s' remote device in 'auto.master' file."
+#~ msgstr "Úprava záznamu pro vzdálené zařízení '%s' v souboru 'auto.master'."
+
+#~ msgid "New record"
+#~ msgstr "Nový záznam"
+
+#~ msgid "Add new record to 'auto.master' file."
+#~ msgstr "Přidání nového řádku do souboru 'auto.master'."
+
+#~ msgid "Remove record:"
+#~ msgstr "Odstranit záznam:"
+
+#~ msgid "Remove record with '%s' remote device from 'auto.master' file."
+#~ msgstr ""
+#~ "Odstranění záznamu pro vzálené zařízení '%s' ze souboru 'auto.master'."
+
+#~ msgid "Create new record from:"
+#~ msgstr "Vytvořit nový záznam z:"
+
+#~ msgid ""
+#~ "Clone record with '%s' remote device in 'auto.master' file and create "
+#~ "file with mountpoint parameters withal."
+#~ msgstr ""
+#~ "Naklonování záznamu se vzdáleným zařízením '%s' v 'auto.master' souboru a "
+#~ "zároveň vytvoření souboru s parametry připojení."
+
+#~ msgid "Edit -"
+#~ msgstr "Upravit -"
+
+#~ msgid ""
+#~ "Edit file '%s' with mountpoint parameters for existing '%s' remote device."
+#~ msgstr ""
+#~ "Úprava souboru '%s' s parametry připojení pro existující vzdálené "
+#~ "zařízení '%s'."
+
+#~ msgid "Add line to -"
+#~ msgstr "Přidat řádek do -"
+
+#~ msgid ""
+#~ "Add next mountpoint parameters line to '%s' for existing '%s' remote "
+#~ "device."
+#~ msgstr ""
+#~ "Přidá další řádek s parametry připojení do '%s' pro existující vzdálené "
+#~ "zařízení '%s'. "
+
+#~ msgid "Remove -"
+#~ msgstr "Odstranit -"
+
+#~ msgid "Remove file '%s' with mountpoint parameters for '%s' remote device."
+#~ msgstr ""
+#~ "Odstraní soubor '%s' s parametry připojení pro existující vzdálené "
+#~ "zařízení '%s'."
+
+#~ msgid "Help"
+#~ msgstr "Nápověda"
+
+#~ msgid "Brief help on how to use autofs."
+#~ msgstr "Stručná nápověda k používání autofs."
+
+#~ msgid "Remove from extended menu"
+#~ msgstr "Odebrat z Extended menu"
+
+#~ msgid "Remove plugin's run from Extended menu."
+#~ msgstr "Odebere spouštění pluginu z Extended menu."
+
+#~ msgid "Add into extended menu"
+#~ msgstr "Přidat do Extended menu"
+
+#~ msgid "Add plugin's run to Extended menu."
+#~ msgstr "Přidá spouštění pluginu do Extended menu."
+
+#~ msgid "Utility"
+#~ msgstr "Nástroje"
+
+#~ msgid "Next utilities."
+#~ msgstr "Další nástroje."
+
+#~ msgid "Select operation:"
+#~ msgstr "Zvolte operaci:"
+
+#~ msgid "Failed"
+#~ msgstr "Chyba"
+
+#~ msgid "Done"
+#~ msgstr "Dokončeno"
+
+#~ msgid "'%s' not exists, %s will be with default values"
+#~ msgstr "'%s' neexistuje, %s proto bude mít výchozí hodnoty"
+
+#~ msgid "'%s' was removed"
+#~ msgstr "'%s' byl odstraněn"
+
+#~ msgid ""
+#~ "Auto.name '%s' was attached to this record.\n"
+#~ "Remove original '%s'?"
+#~ msgstr ""
+#~ "Auto.name '%s' byl přiřazen k tomuto řádku.\n"
+#~ "Odstranit původní '%s'?"
+
+#~ msgid "'%s' was renamed to '%s'"
+#~ msgstr "'%s' přejmenován na '%s'"
+
+#~ msgid ""
+#~ "Auto.name in record was changed.\n"
+#~ "Do You want rename original '%s' to '%s' too?"
+#~ msgstr ""
+#~ "Auto.name byl změněn.\n"
+#~ "Chcete přejmenovat původní '%s' na '%s'?"
+
+#~ msgid "Nothing"
+#~ msgstr "Nic"
+
+#~ msgid "Record '%s' only"
+#~ msgstr "Pouze řádek '%s'"
+
+#~ msgid "All (record '%s' and its file '%s')"
+#~ msgstr "Vše (řádek '%s' a soubor '%s')"
+
+#~ msgid "What all do You want to remove?"
+#~ msgstr "Co všechno si přejete odstranit?"
+
+#~ msgid "Really remove autofile '%s'?"
+#~ msgstr "Opravdu smazat soubor: '%s'?"
+
+#~ msgid "Update autofs files in AutoBackup"
+#~ msgstr "Aktualizovat autofs soubory v AutoBackup"
+
+#~ msgid ""
+#~ "Automaticaly add valid autofs files to /etc/backup.cfg file used by "
+#~ "AutoBackup plugin."
+#~ msgstr ""
+#~ "Automaticky přidá platné autofs soubory do souboru /etc/backup.cfg, který "
+#~ "používá AutoBackup plugin."
+
+#~ msgid "Remove unused autofs files in AutoBackup"
+#~ msgstr "Odstranit nepoužívané autofs soubory z AutoBackup"
+
+#~ msgid "Remove unused autofs files from /etc/backup.cfg file."
+#~ msgstr "Odstranění nepoužívaných autofs souborů z /etc/backup.cfg."
+
+#~ msgid "Remove backup files"
+#~ msgstr "Odstranit záložní soubory"
+
+#~ msgid "Remove selected backup files created when editing autofs files."
+#~ msgstr ""
+#~ "Odstranění vybraných záložních souborů, které se vytvořily při úpravách "
+#~ "autofs souborů."
+
+#~ msgid "Install autofs"
+#~ msgstr "Nainstalovat autofs"
+
+#~ msgid "Install required autofs package if missing."
+#~ msgstr "Instaluje požadovaný balíček autofs, jestliže chybí."
+
+#~ msgid "Next items are not needed standardly:"
+#~ msgstr "Následující položky nejsou standardně potřeba:"
+
+#~ msgid "Use '%s' as HDD replacement"
+#~ msgstr "Použít '%s' jako náhradu HDD"
+
+#~ msgid "You can use current mountpoint '%s' as HDD replacement."
+#~ msgstr "Můžete použít aktuální přístupový bod '%s' jako náhradu HDD."
+
+#~ msgid "Cancel '%s' as HDD replacement"
+#~ msgstr "Zrušit '%s' jako náhradu HDD"
+
+#~ msgid "Cancel using '%s' as HDD replacement."
+#~ msgstr "Zrušit používání '%s' jako náhrady HDD."
+
+#~ msgid "Reload autofs"
+#~ msgstr "Reload autofs"
+
+#~ msgid ""
+#~ "Reload autofs mount maps. It is made standardly on each plugin close."
+#~ msgstr ""
+#~ "Provede 'autofs reload', neboli aktualizaci map připojení. Standardně se "
+#~ "provádí při každém ukončení pluginu."
+
+#~ msgid "Restart autofs with GUI restart"
+#~ msgstr "Restartovat autofs a enigma"
+
+#~ msgid ""
+#~ "Sometimes it is needed restart autofs deamon and GUI. Use this option and "
+#~ "then wait for finishing and for restart GUI."
+#~ msgstr ""
+#~ "Někdy je potřeba restartovat autofs daemon zároveň s restartem "
+#~ "uživatelského rozhraní. K tomu použijte tuto volbu a poté čekejte na "
+#~ "spuštění a dokončení restartu systému. "
+
+#~ msgid "Open AutoBackup plugin"
+#~ msgstr "Otevřít AutoBackup plugin"
+
+#~ msgid "Runs AutoBackup plugin"
+#~ msgstr "Spuštění AutoBackup plugin k provedení zálohy."
+
+#~ msgid "Reload Bookmarks"
+#~ msgstr "Aktualizovat záložky"
+
+#~ msgid ""
+#~ "Check bookmarks with current mountpoints. It is made standardly on each "
+#~ "plugin close."
+#~ msgstr ""
+#~ "Zkontroluje záložky a aktuální připojení. Provádí se automaticky při "
+#~ "každém ukončení pluginu."
+
+#~ msgid "Clear bookmarks..."
+#~ msgstr "Čistit záložky..."
+
+#~ msgid "Removing selected bookmarks."
+#~ msgstr "Odstranění vybraných záložek."
+
+#~ msgid ""
+#~ "You can preset several input parameters before creating more autofiles. "
+#~ "Values can be then inserted with blue button on current item. Presettings "
+#~ "account values can be cleared on plugin exit."
+#~ msgstr ""
+#~ "Před zakládáním více 'auto.file' souborů můžete přednastavit několik "
+#~ "zadávaných hodnot. Hodnoty mohou být poté vkládány pomocí modrého "
+#~ "tlačítka na aktuální položce. Přednastavené hodnoty pro připojení mohou "
+#~ "být při ukončení pluginu smazány."
+
+#~ msgid "Presetting input values..."
+#~ msgstr "Přednastavené vstupní hodnoty..."
+
+#~ msgid "Really reload autofs and restart GUI?"
+#~ msgstr "Skutečně reload autofs a restartovat enigma?"
+
+#~ msgid "Point '%s' is not mounted!"
+#~ msgstr "Bod '%s' není připojen!"
+
+#~ msgid "Select '%s' directory:"
+#~ msgstr "Zvolte '%s' adresář:"
+
+#~ msgid "'%s.auto' has wrong format or is empty!"
+#~ msgstr "'%s.auto' má neplatný formát nebo je prázdný!"
+
+#~ msgid "%s as /hdd"
+#~ msgstr "%s jako /hdd"
+
+#~ msgid "File '%s' was created!"
+#~ msgstr "Soubor '%s' byl založen!"
+
+#~ msgid "Update AutoBackup's '%s'?"
+#~ msgstr "Aktualizovat AutoBackup '%s'?"
+
+#~ msgid "Missing '/etc/backup.cfg'"
+#~ msgstr "Chybějící '/etc/backup.cfg'"
+
+#~ msgid "Remove unused lines from '%s'?"
+#~ msgstr "Odstranit nepoužívané soubory z '%s'?"
+
+#~ msgid "Please wait for restart GUI!"
+#~ msgstr "Počkejte na dokončení restartu GUI!"
+
+#~ msgid "Autofs is not installed!"
+#~ msgstr "Autofs není nainstalován!"
+
+#~ msgid "Manager Autofs - edited record: %s"
+#~ msgstr "Manager Autofs - upravovaný záznam: %s"
+
+#~ msgid "Manager Autofs - create new record"
+#~ msgstr "Manager Autofs - založení nového záznamu"
+
+#~ msgid "Ok"
+#~ msgstr "Ok"
+
+#~ msgid "enabled"
+#~ msgstr "povolen"
+
+#~ msgid "mountpoint name"
+#~ msgstr "bod připojení"
+
+#~ msgid "auto.name"
+#~ msgstr "auto.name"
+
+#~ msgid "ghost"
+#~ msgstr "ghost"
+
+#~ msgid "time"
+#~ msgstr "time"
+
+#~ msgid "Put autoname"
+#~ msgstr "Vložit auto.name"
+
+#~ msgid "Put mountpoint name"
+#~ msgstr "Vložit bod připojení"
+
+#~ msgid "You cannot use 'master' in auto.file name"
+#~ msgstr "Nelze použít 'master' v názvu auto.name"
+
+#~ msgid ""
+#~ "Do You want use existing '%s' file?\n"
+#~ "If not then change auto.name."
+#~ msgstr ""
+#~ "Chcete použít existující soubor '%s'?\n"
+#~ "Jestliže ne, změňte auto.name."
+
+#~ msgid "Mountpoint name '%s' is used!"
+#~ msgstr "Název bodu připojení '%s' je již použitý!"
+
+#~ msgid "no"
+#~ msgstr "ne"
+
+#~ msgid "Manager Autofs - edited autofile/record: %s"
+#~ msgstr "Manager Autofs - upravovaný soubor/řádek: %s"
+
+#~ msgid "local directory"
+#~ msgstr "místní adresář"
+
+#~ msgid "fstype"
+#~ msgstr "fstype"
+
+#~ msgid "soft"
+#~ msgstr "soft"
+
+#~ msgid "intr"
+#~ msgstr "fstype"
+
+#~ msgid "rw/ro"
+#~ msgstr "rw/ro"
+
+#~ msgid "use user/pass"
+#~ msgstr "uživatel/heslo"
+
+#~ msgid "user"
+#~ msgstr "uživatel"
+
+#~ msgid "password"
+#~ msgstr "heslo"
+
+#~ msgid "domain"
+#~ msgstr "doména"
+
+#~ msgid "domain name"
+#~ msgstr "domain name"
+
+#~ msgid "noperm"
+#~ msgstr "noperm"
+
+#~ msgid "noatime"
+#~ msgstr "noatime"
+
+#~ msgid "noserverino"
+#~ msgstr "noserverino"
+
+#~ msgid "nosuid"
+#~ msgstr "nosuid"
+
+#~ msgid "nodev"
+#~ msgstr "nodev"
+
+#~ msgid "rsize"
+#~ msgstr "rsize"
+
+#~ msgid "wsize"
+#~ msgstr "wsize"
+
+#~ msgid "iocharset"
+#~ msgstr "iocharset"
+
+#~ msgid "security"
+#~ msgstr "security"
+
+#~ msgid "use ip/name or dev"
+#~ msgstr "použít IP/název nebo dev"
+
+#~ msgid "ip or name"
+#~ msgstr "IP nebo název"
+
+#~ msgid "ip"
+#~ msgstr "IP"
+
+#~ msgid "name"
+#~ msgstr "název"
+
+#~ msgid "dev"
+#~ msgstr "dev"
+
+#~ msgid "shared remote directory"
+#~ msgstr "sdílený vzdálený adresář"
+
+#~ msgid "smb version"
+#~ msgstr "samba verze"
+
+#~ msgid "user string"
+#~ msgstr "uživatelský řetězec"
+
+#~ msgid "Use preset"
+#~ msgstr "Použít přednastavené"
+
+#~ msgid "Wrong file format!"
+#~ msgstr "Chybný formát souboru!"
+
+#~ msgid "Edit"
+#~ msgstr "Upravit"
+
+#~ msgid "Add"
+#~ msgstr "Přidat"
+
+#~ msgid "Erase"
+#~ msgstr "Odstranit"
+
+#~ msgid "Manager Autofs - press %sEdit%s or %sOK%s for edit or use %sMenu%s"
+#~ msgstr ""
+#~ "Manager Autofs - pro úpravu stiskněte %sUpravit%s nebo %sOK%s nebo "
+#~ "použijte %sMenu%s"
+
+#~ msgid "Edit line"
+#~ msgstr "Upravit řádek"
+
+#~ msgid "Edit line with mountpoint parameters."
+#~ msgstr "Úprava řádku s parametry připojení."
+
+#~ msgid "Add line"
+#~ msgstr "Přidat řádek"
+
+#~ msgid "Add next line with mountpoint parameters."
+#~ msgstr "Přidání dalšího řádku s parametry připojení."
+
+#~ msgid "Remove line"
+#~ msgstr "Odstranit řádek"
+
+#~ msgid "Remove line with mountpoint parameters."
+#~ msgstr "Odstranění řádku s parametry připojení."
+
+#~ msgid "No valid item"
+#~ msgstr "Neplatná položka"
+
+#~ msgid "New"
+#~ msgstr "Nový"
+
+#~ msgid "Really erase record: '%s'?"
+#~ msgstr "Opravdu smazat řádek: '%s'?"
+
+#~ msgid "User and password preseting"
+#~ msgstr "Přednastavení přístupových údajů"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Preset username account value."
+#~ msgstr "Přednastavená hodnota uživatelského jména."
+
+#~ msgid "Preset account password value."
+#~ msgstr "Přednastavená hodnota hesla účtu."
+
+#~ msgid "save preset account values"
+#~ msgstr "ukládat přednastavené hodnoty přístupu"
+
+#~ msgid "Preset account values will be or will not be saved on plugin exit."
+#~ msgstr ""
+#~ "Přednastavené hodnoty pro připojení budou nebo nebudou při ukončení "
+#~ "pluginu ukládány."
+
+#~ msgid "Preset value for local directory."
+#~ msgstr "Přednastavená hodnota pro místní adresář."
+
+#~ msgid "Preset value for shared remote directory."
+#~ msgstr "Přednastavená hodnota pro sdílený vzdálený adresář."
+
+#~ msgid "List of bookmarks"
+#~ msgstr "Seznam záložek"
+
+#~ msgid "Add or remove item of selection"
+#~ msgstr "Přidat nebo odebrat položku z výběru"
+
+#~ msgid "Delete selected"
+#~ msgstr "Smazat vybrané"
+
+#~ msgid "Sort list"
+#~ msgstr "Setřídit seznam"
+
+#~ msgid "Invert selection"
+#~ msgstr "Inverze výběru"
+
+#~ msgid "Delete"
+#~ msgstr "Odstranit"
+
+#~ msgid "Sort"
+#~ msgstr "Třídění"
+
+#~ msgid "Inversion"
+#~ msgstr "Inverze"
+
+#~ msgid "Select with 'OK' and then remove with 'Delete'."
+#~ msgstr "Vyberte pomocí 'OK' a pak odstraňte pomocí 'Smazat'."
+
+#~ msgid "Are You sure to delete %s selected bookmark(s)?"
+#~ msgstr "Opravdu chctete smazat %s označených  záložek?"
+
+#~ msgid "Remove"
+#~ msgstr "Smazat"
+
+#~ msgid "Press 'Remove' on file or mark files with OK and then use 'Remove'"
+#~ msgstr ""
+#~ "Stiskněte 'Odstranit' na souboru nebo označte soubory pomocí 'OK' a poté "
+#~ "použijte tlačítko 'Odstranit'"
+
+#~ msgid "Are you sure to remove selected files?"
+#~ msgstr "Chcete odstranit vybrané soubory?"
+
+#~ msgid "Are you sure to remove file '%s'?"
+#~ msgstr "Opravdu smazat soubor: '%s'?"
+
+#~ msgid "All"
+#~ msgstr "Vše"
+
+#~ msgid "Mode II"
+#~ msgstr "Mód II"
+
+#~ msgid "Mode III"
+#~ msgstr "Mód III"
+
+#~ msgid "Install autofs with:  opkg install autofs"
+#~ msgstr "Nainstalujte autofs příkazem:  opkg install autofs"
+
+#~ msgid "- then edit:"
+#~ msgstr "- poté upravte:"
+
+#~ msgid ""
+#~ "/etc/auto.master file (for this plugin use lines with parameters only!)"
+#~ msgstr ""
+#~ "/etc/auto.master soubor (pro plugin používejte pouze řádky s parametry!)"
+
+#~ msgid "/etc/auto.xxxx - as 'xxxx' use any name"
+#~ msgstr "/etc/auto.xxxx - jako 'xxxx' použijte nějaké jméno"
+
+#~ msgid "%sMode I:%s  (auto.master + one auto.xxxx only)"
+#~ msgstr "%sMód I:%s  (auto.master + pouze jeden auto.xxxx soubor)"
+
+#~ msgid "/etc/auto.master - one record only, mountpoint must be '/mnt/net':"
+#~ msgstr ""
+#~ "/etc/auto.master - pouze jeden řádek, mountpoint musí být '/mnt/net':"
+
+#~ msgid "/etc/auto.test - 'test' used as example:"
+#~ msgstr "/etc/auto.test - 'test' použit jako příklad:"
+
+#~ msgid ""
+#~ "All remote directories from all devices will be mounted under '/media/"
+#~ "net':"
+#~ msgstr ""
+#~ "Všechny vzdálené adresáře ze všech zařízení budou připojeny pod '/media/"
+#~ "net':"
+
+#~ msgid "+ only 2 files for whole work"
+#~ msgstr "+ pouze 2 soubory pro práci"
+
+#~ msgid "- mount/umount all together"
+#~ msgstr "- připojení/odpojení pouze všeho najednou"
+
+#~ msgid "- it is not very clear what is what"
+#~ msgstr "- není moc přehledné, co je co"
+
+#~ msgid "(It has not sense using this mode with this plugin)"
+#~ msgstr "(tento mód nemá moc smysl používat s tímto pluginem)"
+
+#~ msgid "%sMode II:%s  (auto.master + more auto.xxxx files)"
+#~ msgstr "%sMód II:%s  (auto.master + více auto.xxxx souborů)"
+
+#~ msgid "auto.master with more records (no mountpoint as '/mnt/net'):"
+#~ msgstr "auto.master s více řádky (žádný mountpoint nesmí být '/mnt/net'):"
+
+#~ msgid "more auto.xxxx files - each file for one shared directory:"
+#~ msgstr "více souborů auto.xxxx - každý soubor pro jedno připojení:"
+
+#~ msgid "Each shared directory has own mounpoint under /media:"
+#~ msgstr "Každý sdílený adresář má vlastní připojení pod /media:"
+
+#~ msgid "- more auto.xxxx files"
+#~ msgstr "- více souborů auto.xxxx"
+
+#~ msgid "+ very clear what is what"
+#~ msgstr "+ velice přehledné, co je co"
+
+#~ msgid ""
+#~ "+ can be mounted/umounted independently with uncomment/comment line(s) in "
+#~ "auto.master"
+#~ msgstr ""
+#~ "+ může být připojeno/odpojeno každé připojení zvlášť povolením/zakázáním "
+#~ "řádku v auto.master"
+
+#~ msgid "%sMode III:%s  (similar as II)"
+#~ msgstr "%sMód III:%s  (podobný jako II)"
+
+#~ msgid "-in auto.xxxx files can be used more lines"
+#~ msgstr "-v souboru auto.xxxx může být použito více řádků"
+
+#~ msgid "-useful, if one device sharing more directories"
+#~ msgstr "-užitečné, jestliže jedno zařízení sdílí více adresářů"
+
+#~ msgid "-everything else is the same as for II"
+#~ msgstr "-vše ostatní je stejné jako pro II"
+
+#~ msgid "example of auto.synology:"
+#~ msgstr "příklad pro auto.synology:"
+
+#~ msgid "then will be mounted as:"
+#~ msgstr "bude připojeno jako:"
+
+#~ msgid ""
+#~ "After change parameters in auto.file is better use %s'Restart autofs with "
+#~ "GUI restart'%s there in 'Menu-Utility'"
+#~ msgstr ""
+#~ "Po změnách parametrů v auto.souboru je lepší použít %s'Restartovat autofs "
+#~ "a enigma'%s v 'Menu-Nástroje'"
+
+#~ msgid "%sConnect to Win7,8,10 shared folder:%s"
+#~ msgstr "%sPřipojení ke sdílenému adresáři Win7,8,10:%s"
+
+#~ msgid "PC side:"
+#~ msgstr "Strana PC:"
+
+#~ msgid ""
+#~ "-on directory press right mouse, select %s'Properties'%s and use bookmark "
+#~ "%s'Sharing'%s"
+#~ msgstr ""
+#~ "-na složce stiskněte pravé tlačítko myši, zvolte %s'Vlastnosti'%s a "
+#~ "vyberte záložku %s'Sdílení'%s"
+
+#~ msgid ""
+#~ "-press %s'Advanced Sharing...'%s button, set %s'Share this folder'%s to on"
+#~ msgstr ""
+#~ "-stiskněte tlačítko %s'Rozšířené možnosti sdílení...'%s a zaškrtněte "
+#~ "%s'Sdílet tuto složku'%s"
+
+#~ msgid "-can be changed %s'Shared name'%s too"
+#~ msgstr "-můžete změnit %s'Název sdílené složky'%s"
+
+#~ msgid ""
+#~ "-press %s'Permissions'%s button and check, if there exists %s'Everyone'%s "
+#~ "with enabled %s'Change'%s and %s'Read'%s"
+#~ msgstr ""
+#~ "-stiskněte tlačítko %s'Oprávnění'%s a zkontrolujte, jestli zde existuje "
+#~ "%s'Everyone'%s s povoleným %s'Změnit'%s a %s'Číst'%s"
+
+#~ msgid "Box side:"
+#~ msgstr "Strana přijímače:"
+
+#~ msgid ""
+#~ "- under %s'user/pass'%s must be used valid PC's %s'user'%s and "
+#~ "%s'password'%s"
+#~ msgstr ""
+#~ "- pod %s'uživatel/heslo'%s musí být použit platný %s'uživatel'%s a "
+#~ "%s'heslo'%s z PC"
+
+#~ msgid ""
+#~ "- for %s'cifs'%s fstype and Win10 must be set %s'smb version'%s minimaly "
+#~ "to %s'2.0'%s"
+#~ msgstr ""
+#~ "- pro %s'cifs'%s fstype a Win10 musí být %s'smb version'%s nastavena "
+#~ "minimálně na %s'2.0'%s"
+
+#~ msgid "User and password presetting..."
+#~ msgstr "Přednastavení přístupových údajů..."
+
+#~ msgid "used ip"
+#~ msgstr "použít IP"
+
+#~ msgid "Autofs file: %s"
+#~ msgstr "Autofs soubor: %s"
+
+#~ msgid ""
+#~ "File %s with %d lines.\n"
+#~ "Not supported yet"
+#~ msgstr ""
+#~ "Soubor %s s %d řádky.\n"
+#~ "Zatím není podporováno."

@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-10 17:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "plugins"
+msgstr ""
+
+msgid "menu-system"
+msgstr ""
+
+msgid "extensions"
+msgstr ""
+
+msgid "event info"
+msgstr ""
+
+msgid "Setup MemInfo"
+msgstr ""
+
+msgid "memory monitoring"
+msgstr ""
+
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#, python-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Restart"
+msgstr ""
+
+msgid "Enable MemInfo"
+msgstr ""
+
+msgid "Auto timeout"
+msgstr ""
+
+msgid "Time of info message"
+msgstr ""
+
+msgid "Auto timeout (1-50min)"
+msgstr ""
+
+msgid "Time of info message (1-10sec)"
+msgstr ""
+
+msgid "Show info on screen"
+msgstr ""
+
+msgid "Display plugin in"
+msgstr ""
+
+msgid "Memory:"
+msgstr ""
+
+msgid "MB"
+msgstr ""
+
+msgid "Used:"
+msgstr ""
+
+msgid "Free:"
+msgstr ""
+
+msgid "Starting"
+msgstr ""
+
+msgid "MemInfo Status"
+msgstr ""
+
+msgid "Started"
+msgstr ""
+
+msgid "Stopped"
+msgstr ""
+
+msgid "MemInfo saved"
+msgstr ""
+
+msgid "MemInfo Info"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
