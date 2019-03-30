@@ -4,8 +4,8 @@ from . import _
 #
 #    Plugin for Dreambox-Enigma2
 #    version:
-VERSION = "1.02"
-#    ims (c)2018 as MemInfo
+VERSION = "1.03"
+#    ims (c)2018-2019 as MemInfo
 #
 #    This program is free software; you can redistribute it and/or
 #    modify it under the terms of the GNU General Public License
@@ -24,13 +24,31 @@ from Components.config import ConfigYesNo, ConfigSelection, ConfigInteger, confi
 from Components.ActionMap import ActionMap
 from Components.Label import Label
 from os import system
-from enigma import eTimer, getDesktop
+from enigma import eTimer, getDesktop, eConsoleAppContainer
 from Components.ProgressBar import ProgressBar
 from time import localtime
 
 HD = False
 if getDesktop(0).size().width() >= 1280:
 	HD = True
+
+def getMemory():
+	try:
+		mm = mu = mf = 0
+		for line in open('/proc/meminfo','r'):
+			line = line.strip()
+			if "MemFree:" in line:
+				line = line.split()
+				mf = int(line[1])
+			if "MemAvailable:" in line:
+				line = line.split()
+				ma = int(line[1])
+				break
+		return _("Free:") + " %d%s" % ((mf/1024),_("MB"))
+
+	except Exception, e:
+		print "[MemInfo] getMemory FAIL:", e
+		return ""
 
 config.plugins.MemInfo.enable = ConfigYesNo(default = False)
 
@@ -150,8 +168,10 @@ class MemInfoSetupMenu(Screen, ConfigListScreen):
 		self.onLayoutFinish.append(self.layoutFinished)
 
 	def layoutFinished(self):
+		self["memory"].setText("")
+		self["slide"].hide()
 		self.setTitle(_("Setup MemInfo") + "  " + VERSION)
-		self["memory"].setText(self.getMemory(ALL))
+		self["memory"].setText(getMemory())
 
 	def runSetup(self):
 		self.list = [ getConfigListEntry(_("Enable MemInfo"), cfg.enable) ]
@@ -203,41 +223,11 @@ class MemInfoSetupMenu(Screen, ConfigListScreen):
 		getMinMax()
 		self.keySave()
 
-	def getMemory(self, par=0x01):
-		try:
-			mm = mu = mf = 0
-			for line in open('/proc/meminfo','r'):
-				line = line.strip()
-				if "MemTotal:" in line:
-					line = line.split()
-					mm = int(line[1])
-				if "MemFree:" in line:
-					line = line.split()
-					mf = int(line[1])
-					break
-			mu = mm - mf
-			self["memory"].setText("")
-			self["slide"].hide()
-			memory = ""
-			if par&0x01:
-				memory += "".join((_("Memory:")," %d " % (mm/1024),_("MB"),"  "))
-			if par&0x02:
-				memory += "".join((_("Used:")," %.2f%s" % (100.*mu/mm,'%'),"  "))
-			if par&0x04:
-				memory += "".join((_("Free:")," %.2f%s" % (100.*mf/mm,'%')))
-			if par&0x10:
-				self["slide"].setValue(int(100.0*mu/mm+0.25))
-				self["slide"].show()
-			return memory
-		except Exception, e:
-			print "[MemInfo] getMemory FAIL:", e
-			return ""
-
 	def memoryInfo(self):
 		self.session.openWithCallback(self.afterInfo, MemInfoInfoScreen)
 
 	def afterInfo(self, answer=False):
-		self["memory"].setText(self.getMemory(ALL))
+		self["memory"].setText(getMemory())
 
 class MemInfoAutoMain():
 	def __init__(self):
@@ -245,9 +235,10 @@ class MemInfoAutoMain():
 		self.show = False
 
 	def startMemInfo(self, session):
-		if not self.dialog:
-			self.dialog = session.instantiateDialog(MemInfoAutoScreen)
-		self.showDialog()
+		if config.plugins.MemInfo.enable.value:
+			if not self.dialog:
+				self.dialog = session.instantiateDialog(MemInfoAutoScreen)
+			self.showDialog()
 
 	def showDialog(self):
 		if cfg.screen_info.value:
@@ -303,13 +294,18 @@ class MemInfoAutoScreen(Screen):
 		if cfg.enable.value:
 			getMinMax()
 			if self.instance:
-				self['message_label'].setText(_("MemInfo saved"))
+				self.clearMemory()
+				self['message_label'].setText(getMemory())
 				if cfg.screen_info.value and MemInfoAuto.dialog:
 					MemInfoAuto.dialog.show()
 					MemInfoAuto.show = True
 		t = localtime()
 		print "[MemInfo]", "%2d:%02d:%02d" % (t.tm_hour, t.tm_min, t.tm_sec)
 		self.MemInfoRepeatTimer.start(int(cfg.repeat_timeout.value)*60000, True)
+
+	def clearMemory(self):
+		eConsoleAppContainer().execute("sync")
+		open("/proc/sys/vm/drop_caches", "w").write("3")
 
 	def __endShow(self):
 		if MemInfoAuto.show:
