@@ -141,11 +141,11 @@ class MemInfoSetupMenu(Screen, ConfigListScreen):
 		<ePixmap pixmap="skin_default/div-h.png" position="0,223" zPosition="2" size="500,2" />
 		<widget name="memory" position="10,225" zPosition="2" size="480,25" valign="center" halign="left" font="Regular;20" transparent="1" foregroundColor="white" />
 		<widget name="slide" position="10,250" zPosition="2" borderWidth="1" size="480,8" backgroundColor="dark" />
-		<ePixmap pixmap="skin_default/div-h.png" position="0,258" zPosition="2" size="500,2" />
-		<widget name="key_red" position="0,260" zPosition="2" size="120,30" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="red" />
-		<widget name="key_green" position="120,260" zPosition="2" size="120,30" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="green" />
-		<widget name="key_yellow" position="240,260" zPosition="2" size="120,30" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="yellow" />
-		<widget name="key_blue" position="360,260" zPosition="2" size="120,30" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="blue" />
+		<ePixmap pixmap="skin_default/div-h.png" position="0,260" zPosition="2" size="500,2" />
+		<widget name="key_red" position="0,263" zPosition="2" size="120,30" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="red" />
+		<widget name="key_green" position="120,263" zPosition="2" size="120,30" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="green" />
+		<widget name="key_yellow" position="240,263" zPosition="2" size="120,30" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="yellow" />
+		<widget name="key_blue" position="360,263" zPosition="2" size="120,30" valign="center" halign="center" font="Regular;22" transparent="1" foregroundColor="blue" />
 	</screen>"""
 
 	def __init__(self, session):
@@ -380,6 +380,7 @@ class MemInfoInfoScreen(Screen):
 		self["text"].pageDown()
 
 	def getMemInfo(self):
+		getMinMax()
 		try:
 			text = ""
 			for i, line in enumerate(open('/var/log/meminfo.log','r')):
