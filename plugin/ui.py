@@ -4,7 +4,7 @@ from . import _
 #
 #    Plugin for Dreambox-Enigma2
 #    version:
-VERSION = "1.03"
+VERSION = "1.04"
 #    ims (c)2018-2019 as MemInfo
 #
 #    This program is free software; you can redistribute it and/or
@@ -32,19 +32,33 @@ HD = False
 if getDesktop(0).size().width() >= 1280:
 	HD = True
 
-def getMemory():
+def getMemory(ALL=False):
 	try:
-		mm = mu = mf = 0
-		for line in open('/proc/meminfo','r'):
-			line = line.strip()
-			if "MemFree:" in line:
-				line = line.split()
-				mf = int(line[1])
-			if "MemAvailable:" in line:
-				line = line.split()
-				ma = int(line[1])
-				break
-		return _("Free:") + " %d%s" % ((mf/1024),_("MB"))
+		if not ALL:
+			mf = 0
+			for line in open('/proc/meminfo','r'):
+				line = line.strip()
+				if "MemFree:" in line:
+					line = line.split()
+					mf = int(line[1])
+			return _("Free:") + " %d%s" % ((mf/1024),_("MB"))
+		else:
+			mem = free = 0
+			for i, line in enumerate(open('/proc/meminfo','r')):
+				s = line.strip().split(None, 2)
+				if len(s) == 3:
+					name, size, units = s
+				elif len(s) == 2:
+					name, size = s
+					units = ""
+				else:
+					continue
+
+				if name.startswith("MemTotal"):
+					mem = int(size)
+				if name.startswith("MemFree") or name.startswith("Buffers") or name.startswith("Cached"):
+					free += int(size)
+			return (mem, free)
 
 	except Exception, e:
 		print "[MemInfo] getMemory FAIL:", e
@@ -86,9 +100,6 @@ for i in range(1, 11):
 config.plugins.MemInfo.timescreen_info = ConfigSelection(default = "5", choices = choicelist)
 choicelist = [("0",_("Default")),]
 cfg = config.plugins.MemInfo
-
-# display mem, used, free and progressbar
-ALL = 0x17
 
 def getMinMax():
 	global START
@@ -171,7 +182,16 @@ class MemInfoSetupMenu(Screen, ConfigListScreen):
 		self["memory"].setText("")
 		self["slide"].hide()
 		self.setTitle(_("Setup MemInfo") + "  " + VERSION)
-		self["memory"].setText(getMemory())
+		mem, free = getMemory(True)
+		self["slide"].setValue(int(100.0*(mem-free)/mem+0.25))
+		self["slide"].show()
+		self["memory"].setText(self.memCount(mem, free))
+
+	def memCount(self, mem, free):
+		m = "".join((_("Memory:")," %d " % (mem/1024),_("MB"),"  "))
+		m += "".join((_("Used:")," %.2f%s" % (100.*(mem-free)/mem,'%'),"  "))
+		m += "".join((_("Free:")," %.2f%s" % (100.*free/mem,'%')))
+		return m
 
 	def runSetup(self):
 		self.list = [ getConfigListEntry(_("Enable MemInfo"), cfg.enable) ]
@@ -227,7 +247,8 @@ class MemInfoSetupMenu(Screen, ConfigListScreen):
 		self.session.openWithCallback(self.afterInfo, MemInfoInfoScreen)
 
 	def afterInfo(self, answer=False):
-		self["memory"].setText(getMemory())
+		mem, free = getMemory(True)
+		self["memory"].setText(self.memCount(mem, free))
 
 class MemInfoAutoMain():
 	def __init__(self):
