@@ -4,8 +4,8 @@ from . import _
 #
 #    Plugin for Dreambox-Enigma2
 #    version:
-VERSION = "1.04"
-#    ims (c)2018-2019 as MemInfo
+VERSION = "1.05"
+#    ims (c)2018-2021 as MemInfo
 #
 #    This program is free software; you can redistribute it and/or
 #    modify it under the terms of the GNU General Public License
@@ -79,17 +79,22 @@ except Exception, e:
 	print "[MemInfo] ngettext is not supported:", e
 
 choicelist = []
+for i in range(10, 60, 10):
+	if NGETTEXT:
+		choicelist.append(("%d" % i, ngettext("%d second", "%d seconds", i) % i))
+	else:
+		choicelist.append(("%d" % i, "%d seconds" % i))
 for i in range(1, 5, 1):
 	if NGETTEXT:
-		choicelist.append(("%d" % i, ngettext("%d minute", "%d minutes", i) % i))
+		choicelist.append(("%d" % (i*60), ngettext("%d minute", "%d minutes", i) % i))
 	else:
-		choicelist.append(("%d" % i))
+		choicelist.append(("%d" % (i*60), "%d minutes" % i))
 for i in range(5, 61, 5):
 	if NGETTEXT:
-		choicelist.append(("%d" % i, ngettext("%d minute", "%d minutes", i) % i))
+		choicelist.append(("%d" % (i*60), ngettext("%d minute", "%d minutes", i) % i))
 	else:
-		choicelist.append(("%d" % i))
-config.plugins.MemInfo.repeat_timeout = ConfigSelection(default = "5", choices = choicelist)
+		choicelist.append(("%d" % (i*60), "%d minutes" % i))
+config.plugins.MemInfo.repeat_timeout = ConfigSelection(default = "300", choices = choicelist)
 config.plugins.MemInfo.screen_info = ConfigYesNo(default = True)
 choicelist = []
 for i in range(1, 11):
@@ -309,7 +314,7 @@ class MemInfoAutoScreen(Screen):
 			self.state = cfg.enable.value
 			if cfg.screen_info.value and MemInfoAuto.dialog:
 				MemInfoAuto.dialog.show()
-		self.MemInfoRepeatTimer.start(int(cfg.repeat_timeout.value)*60000, True)
+		self.MemInfoRepeatTimer.start(int(cfg.repeat_timeout.value)*1000, True)
 
 	def __run(self):
 		if cfg.enable.value:
@@ -322,7 +327,7 @@ class MemInfoAutoScreen(Screen):
 					MemInfoAuto.show = True
 		t = localtime()
 		print "[MemInfo]", "%2d:%02d:%02d" % (t.tm_hour, t.tm_min, t.tm_sec)
-		self.MemInfoRepeatTimer.start(int(cfg.repeat_timeout.value)*60000, True)
+		self.MemInfoRepeatTimer.start(int(cfg.repeat_timeout.value)*1000, True)
 
 	def clearMemory(self):
 		eConsoleAppContainer().execute("sync")
