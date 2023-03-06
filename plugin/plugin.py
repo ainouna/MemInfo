@@ -32,13 +32,13 @@ def startSetup(menuid, **kwargs):
 
 def sessionAutostart(reason, **kwargs):
 	if reason == 0:
-		import ui
+		from . import ui
 		ui.MemInfoAuto.startMemInfo(kwargs["session"])
 	else:
-		print "[MemInfo] is not running"
+		print("[MemInfo] is not running")
 
 def main(session,**kwargs):
-	import ui
+	from . import ui
 	session.open(ui.MemInfoSetupMenu)
 
 def Plugins(path, **kwargs):

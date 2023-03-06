@@ -60,8 +60,8 @@ def getMemory(ALL=False):
 					free += int(size)
 			return (mem, free)
 
-	except Exception, e:
-		print "[MemInfo] getMemory FAIL:", e
+	except Exception as e:
+		print("[MemInfo] getMemory FAIL:", e)
 		return ""
 
 config.plugins.MemInfo.enable = ConfigYesNo(default = False)
@@ -75,8 +75,8 @@ NGETTEXT = False
 try:	# can be used ngettext ?
 	ngettext("%d minute", "%d minutes", 5)
 	NGETTEXT = True
-except Exception, e:
-	print "[MemInfo] ngettext is not supported:", e
+except Exception as e:
+	print("[MemInfo] ngettext is not supported:", e)
 
 choicelist = []
 for i in range(10, 60, 10):
@@ -326,7 +326,7 @@ class MemInfoAutoScreen(Screen):
 					MemInfoAuto.dialog.show()
 					MemInfoAuto.show = True
 		t = localtime()
-		print "[MemInfo]", "%2d:%02d:%02d" % (t.tm_hour, t.tm_min, t.tm_sec)
+		print("[MemInfo]", "%2d:%02d:%02d" % (t.tm_hour, t.tm_min, t.tm_sec))
 		self.MemInfoRepeatTimer.start(int(cfg.repeat_timeout.value)*1000, True)
 
 	def clearMemory(self):
@@ -392,8 +392,8 @@ class MemInfoInfoScreen(Screen):
 				if i != 2:
 					text += line.strip().replace('\t\t', '\t') + '\n'
 			self["text"].setText(text)
-		except Exception, e:
-			print "[MemInfo] getMemory FAIL:", e
+		except Exception as e:
+			print("[MemInfo] getMemory FAIL:", e)
 
 	def cancel(self):
 		self.close()
